@@ -1,0 +1,33 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+
+
+{% block menu %}
+
+    {% include 'mainapp/includes/inc_menu.html' %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+            <div class="links clearfix">
+                    {% include 'mainapp/includes/inc_categories_menu.html' %}
+            </div>
+        <h2>Описание</h2>
+        <div class="description">
+            <h3 class="big-bold">{{ product.name }}</h3>
+            <img src="/media/{{ product.image }}" alt="Картинка товара" title="{{ product.name }}" width="300">
+            <br>
+            <p class="price"> {{ product.price }} <span>руб</span></p>
+            <a href="{% url 'basket:add' product.pk %}" class="red-button">
+                заказать
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </a>
+            <div class="description-text">
+                {{ product.description }}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

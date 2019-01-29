@@ -1,0 +1,38 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+
+
+{% block menu %}
+
+    {% include 'mainapp/includes/inc_menu.html' %}
+
+{% endblock %}
+
+{% block content %}
+<div class="content">
+        <h2>Каталог</h2>
+        <div class="catalog_items">
+            <div>
+                <a class="item_catalog" href="catalog/item.html">
+                    <div class="item_pic">
+                        <img src="{% static 'img/orig.jpg' %}" alt="Картинка товара" title="Lenovo ThinkPad E480" width="300">
+                    </div>
+                    <div class="item_text">
+                        <p>Lenovo&nbspThinkPad&nbspEdge&nbspE480 (подробно)</p>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a class="item_catalog" href="catalog/item2.html">
+                    <div class="item_pic">
+                        <img src="{% static 'img/orig.webp' %}" alt="Картинка товара" title="HP ProBook 430 G5" width="300">
+                    </div>
+                    <div class="item_text">
+                        <p>HP ProBook 430 G5 (подробно)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+[
+    {
+        "category": "Офисные",
+        "name": "Lenovo ThinkPad E480",
+        "image": "products_images/orig.jpg",
+        "short_desc": "Lenovo ThinkPad E480",
+        "description": "Ноутбук Lenovo ThinkPad Edge E480",
+        "price": "55000",
+        "quantity": "5"
+    },
+    {
+        "category": "Офисные",
+        "name": "HP ProBook 430 G5",
+        "image": "products_images//orig.webp",
+        "short_desc": "HP ProBook 430 G5",
+        "description": "Ноутбук HP ProBook 430 G5",
+        "price": "57000",
+        "quantity": "8"
+    }
+]

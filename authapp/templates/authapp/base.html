@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            {{ title }}
+        {% endblock %}
+    </title>
+    {% block css %} 
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    {% endblock %}
+    {% block js %}
+            
+    {% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div><a class="logo" href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a></div>
+        {% block menu %} 
+        
+        {% endblock %} 
+        </div> 
+        <hr>      
+        <div class="login">
+            <div class="h2 text-center head">
+                Вход в систему
+            </div>
+        
+            {% block content %}
+        
+            {% endblock %}
+        </div>
+    
+    {% block footer %}     
+        <hr>
+        <div class="footer">
+            <p>{% now 'Y' %} Copyright &copy; All rights reserved (Все права защищены)</p>
+        </div>
+    {% endblock %}  
+    </div>
+</body>
+
+</html>

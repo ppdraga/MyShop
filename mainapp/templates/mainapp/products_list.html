@@ -1,0 +1,60 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+
+{% include 'mainapp/includes/inc_menu.html' %}
+
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="details">
+        <div class="links clearfix">
+            {% include 'mainapp/includes/inc_categories_menu.html' %}
+        </div>
+        <div class="products_list">
+            <div class="title clearfix">
+                <h2>
+                    Категория: "{{ category.name|title }}"
+                </h2>
+            </div>
+            
+            <div class = "paginator">
+                {% if products.has_previous %}
+                    <a href = "{% url 'products:page' category.pk products.previous_page_number %}">
+                    <
+                    </a>
+                {% endif %}
+                <span class = "current">
+                страница {{ products.number }} из
+                {{ products.paginator.num_pages }}
+                </span>
+                {% if products.has_next %}
+                <a href = "{% url 'products:page' category.pk products.next_page_number %}">
+                    >
+                </a>
+                {% endif %}
+            </div>
+
+
+            <div class="category-products clearfix">
+                {% for product in products %}
+                <div>
+                    <a class="item_catalog" href="{% url 'products:product' product.pk %}">
+                        <div class="item_pic">
+                            <img src="/media/{{ product.image }}" alt="Картинка товара" title="{{ product.name }}" width="300">
+                        </div>
+                        <div class="item_text">
+                            <h4>{{ product.name }}</h4>
+                            <p>{{ product.description }}</p>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>
+{% endblock %}

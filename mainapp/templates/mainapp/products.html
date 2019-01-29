@@ -1,0 +1,47 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+
+
+{% block menu %}
+
+    {% include 'mainapp/includes/inc_menu.html' %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+            <div class="links clearfix">
+                    {% include 'mainapp/includes/inc_categories_menu.html' %}
+            </div>
+        <h2>Каталог</h2>
+        <div class="catalog_items">
+            {% for product in products %}
+            <div>
+                <a class="item_catalog" href="{% url 'products:product' product.pk %}">
+                    <div class="item_pic">
+                        <img src="/media/{{ product.image }}" alt="Картинка товара" title="{{ product.name }}" width="300">
+                    </div>
+                    <div class="item_text">
+                        <p>{{ product.name }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="description">
+            <h3 class="red">Горячее предложение</h3>
+            <a class="item_catalog" href="{% url 'products:product' hot_product.pk %}">
+                <img src="/media/{{ hot_product.image }}" alt="Картинка товара" title="{{ hot_product.name }}" width="300">
+            </a>
+            <h3 class="big-bold">{{ hot_product.name }}</h3>
+            <p class="price">{{ hot_product.price }} <span>руб</span></p>
+            <a href="{% url 'basket:add' hot_product.pk %}" class="red-button">
+                заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </a>
+            <div class="description-text">
+                {{ hot_product.description }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

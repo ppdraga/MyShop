@@ -1,0 +1,19 @@
+product-1	Lenovo ThinkPad E480		55000	Ноутбук Lenovo ThinkPad Edge E480 (14"/1920x1080/Intel Core i3 8130U/8GB/SSD256GB)
+product-2	HP ProBook 430 G5		57000	Ноутбук HP ProBook 430 G5 (15,6"/1920x1080/Intel Core i5 8250U/8GB/HDD1000GB)
+product-3	Lenovo Ideapad 330s 15		50000	Ноутбук Lenovo Ideapad 330s 15 (15,6"/1920x1080/Intel Core i5 8250U/8GB/HDD1000GB)
+product-4	DELL INSPIRON 5770		53000	Ноутбук DELL INSPIRON 5770 (15,6"/1920x1080/Intel Core i5 8250U/8GB/SSD128GB+HDD1000GB)
+product-5	Xiaomi Mi Notebook Pro 15.6	70000	Ноутбук Xiaomi Mi Notebook Pro 15.6 (15,6"/1920x1080/Intel Core i5 8250U/8GB/SSD256GB)
+product-6	Lenovo Legion Y530		55000	Ноутбук Lenovo Legion Y530 (15,6"/1920x1080/Intel Core i5 8300H/8GB/HDD1000GB)
+product-7	ASUS TUF Gaming FX504GD		60000	Ноутбук ASUS TUF Gaming FX504GD	(15,6"/1920x1080/Intel Core i7 8750H/8GB/HDD1000GB)
+product-8	MSI GL63 8RC			75000	Ноутбук MSI GL63 8RC (15,6"/1920x1080/Intel Core i7 8750H/16GB/HDD1000GB)
+product-9	Xiaomi Mi Gaming Laptop		100000	Ноутбук Xiaomi Mi Gaming Laptop (15,6"/1920x1080/Intel Core i7 8750H/16GB/SSD256GB+HDD1000GB)
+product-10	HP OMEN 17-an106ur		150000	Ноутбук HP OMEN 17-an106ur (17,3"/1920x1080/Intel Core i7 8750H/32GB/SSD256GB+HDD1000GB)
+product-11	Lenovo IdeaPad 320 15		25000	Ноутбук Lenovo IdeaPad 320 15 (15,6"/1366x768/Intel Core i3 6006U/4GB/HDD1000GB)
+product-12	HP 250 G6			20000	Ноутбук HP 250 G6 (15,6"/1366x768/Intel Celeron N3350/4GB/HDD500GB)
+product-13	DELL INSPIRON 3180		15500	Ноутбук DELL INSPIRON 3180 (15,6"/1366x768/Intel Pentium N4200/4GB/HDD500GB)
+product-14	ASUS X540MA			17500	Ноутбук ASUS X540MA (15,6"/1366x768/Intel Pentium N4200/4GB/HDD500GB)
+product-15	Lenovo V130 15IGM		18000	Ноутбук Lenovo V130 15IGM (15,6"/1366x768/Intel Celeron N3350/4GB/HDD500GB)	
+product-16	Patriot Memory DDR4 16GB	8000	Оперативная память Patriot Memory PSD416G24002S
+product-17	Intel Optane SSD M.2 118GB	15000	Твердотельный накопитель Intel SSDPEK1W120GA01
+product-18	Samsung 970EVO SSD 500GB	10000	Твердотельный накопитель Samsung MZ-V7E500BW
+	
