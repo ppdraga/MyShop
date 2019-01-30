@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from django.conf.urls import include, url
+from django.conf.urls import include, url, re_path
 import authapp.views as authapp
 
 from django.conf import settings
@@ -27,4 +27,5 @@ urlpatterns = [
     path('logout/', authapp.logout, name = 'logout'),
     path('register/', authapp.register, name='register'),
     path('edit/', authapp.edit, name='edit'),
+    re_path( r'^verify/(?P<email>.+)/(?P<activation_key>\w+)/$', authapp.verify, name='verify'),
 ]
