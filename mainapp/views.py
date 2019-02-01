@@ -23,7 +23,7 @@ def get_same_products(hot_product):
 
 def main(request):
     title = 'Главная'
-    basket = get_basket(request.user)
+    #basket = get_basket(request.user)
     menu = [
         {
             'title': 'Главная',
@@ -43,14 +43,14 @@ def main(request):
     ]
     content = {
         'title': title,
-        'menu': menu,
-        'basket' : basket
+        'menu': menu
+        #'basket' : basket
     }
     return render(request, 'mainapp/index.html', content)
 
 def contacts(request):
     title = 'Контакты'
-    basket = get_basket(request.user)
+    #basket = get_basket(request.user)
     menu = [
         {
             'title': 'Главная',
@@ -70,8 +70,8 @@ def contacts(request):
     ]
     content = {
         'title': title,
-        'menu': menu,
-        'basket' : basket
+        'menu': menu
+        #'basket' : basket
     }
     return render(request, 'mainapp/contacts.html', content)
 
@@ -97,7 +97,7 @@ def products(request, pk=None, page=1):
     ]
     links_menu = ProductCategory.objects.filter(is_active=True)
 
-    basket = get_basket(request.user)
+    #basket = get_basket(request.user)
 
     if pk is not None:
         if pk is not None:
@@ -120,8 +120,8 @@ def products(request, pk=None, page=1):
             'title' : title,
             'links_menu' : links_menu,
             'category' : category,
-            'products' : products_paginator,
-            'basket' : basket
+            'products' : products_paginator
+            #'basket' : basket
         }
         return render(request, 'mainapp/products_list.html', content)
     
@@ -135,8 +135,8 @@ def products(request, pk=None, page=1):
         'products' : products,
         'menu' : menu,
         'hot_product' : hot_product,
-        'same_products' : same_products,
-        'basket' : basket
+        'same_products' : same_products
+        #'basket' : basket
     }
     return render(request, 'mainapp/products.html', content)
 
@@ -145,7 +145,7 @@ def product(request, pk):
     content = {
         'title' : title,
         'links_menu' : ProductCategory.objects.all(),
-        'product' : get_object_or_404(Product, pk=pk),
-        'basket' : get_basket(request.user),
+        'product' : get_object_or_404(Product, pk=pk)
+        #'basket' : get_basket(request.user),
     }
     return render(request, 'mainapp/product.html' , content)
